@@ -89,7 +89,7 @@ Instead of only throw a simple message and HTTP Status Code this API return frie
   "error": "Not Found",
   "message": "Point not found",
   "code": 144,
-  "docs": "https://github.com/DiegoVictor/ecoleta-api##errors-reference"
+  "docs": "https://github.com/DiegoVictor/ecoleta-api#errors-reference"
 }
 ```
 > Errors are implemented with [@hapi/boom](https://github.com/hapijs/boom).
