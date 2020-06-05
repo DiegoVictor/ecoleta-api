@@ -4,6 +4,6 @@ export default celebrate({
   [Segments.QUERY]: Joi.object().keys({
     city: Joi.string().required(),
     uf: Joi.string().required(),
-    items: Joi.string().required(),
+    items: Joi.alternatives().try(Joi.string(), Joi.array()).required(),
   }),
 });
