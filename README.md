@@ -5,7 +5,7 @@
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecoleta&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fbethehero%2Fmaster%2Fapi%2FInsomnia_2020-06-05.json)
 
 
-Responsible for provide data to the [`web`](https://github.com/DiegoVictor/ecoleta-web) and [`mobile`](https://github.com/DiegoVictor/ecoleta-app) front-ends. Permit to register points and retrieve its items. The app has friendly errors, validation, also a simple versioning was made.
+Responsible for provide data to the [`web`](https://github.com/DiegoVictor/ecoleta-web) and [`mobile`](https://github.com/DiegoVictor/ecoleta-app) front-ends. Allow to register points and set the items type that point receive. The app has friendly errors, validation, also a simple versioning was made.
 
 ## Table of Contents
 * [Installing](#installing)
@@ -64,11 +64,11 @@ $ yarn knex:seed
 ```
 
 ### .env
-In this file you may configure your app's port and a url to documentation (this will be returned with error responses, see [error section](#error-handling)). Rename the `.env.example` in the root directory to `.env` then just update with your settings.
+In this file you may configure your app's url and port, also a url to documentation (this will be returned with error responses, see [error section](#error-handling)). Rename the `.env.example` in the root directory to `.env` then just update with your settings.
 
 |key|description|default
 |---|---|---
-|APP_URL|App's url, when testing the [mobile version](https://github.com/DiegoVictor/ecoleta-app) on devices is strongly recommended to set this key to your expo url (e.g. `192.168.0.6`)|`http://localhost`
+|APP_URL|App's url, when testing the [mobile version](https://github.com/DiegoVictor/ecoleta-app) on devices is strongly recommended to set this key to your [Expo](https://docs.expo.io/) url (e.g. `192.168.0.6`)|`http://localhost`
 |APP_PORT|Port number where the app will run.|`3333`
 |DOCS_URL|An url to docs where users can find more information about the app's internal code errors.|`https://github.com/DiegoVictor/ecoleta-api#errors-reference`
 
@@ -114,13 +114,13 @@ GET http://localhost:3333/v1/points
 |`/items`|GET| - |Lists points' items.
 |`/points`|GET|`city`, `uf` and `items` query parameters.|Lists points.
 |`/points/:id`|GET|`:id` of the point.|Return one point.
-|`/points`|POST|Body with new point data.|Create a new point.
+|`/points`|POST|Body with new point [form data](https://developer.mozilla.org/docs/Web/API/FormData) (See insomnia file for good example).|Create a new point.
 
 ### Requests
 * `POST /points`
 
 Request body:
-```json
+```multipart
 {
   "name": "Hackett, Becker and Fadel",
   "email": "contact@hbfadel.com",
@@ -129,7 +129,8 @@ Request body:
   "longitude": -73.3957,
   "city": "São Paulo",
   "uf": "SP",
-  "items": [1, 2]
+  "items": "1, 2"
+  "image": <file>
 }
 ```
 
