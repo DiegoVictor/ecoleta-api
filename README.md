@@ -2,7 +2,7 @@
 [![eslint](https://img.shields.io/badge/eslint-6.8.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecoleta&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fbethehero%2Fmaster%2Fapi%2FInsomnia_2020-06-05.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecoleta&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fbethehero%2Fmaster%2Fapi%2FInsomnia_2020-06-06.json)
 
 
 Responsible for provide data to the [`web`](https://github.com/DiegoVictor/ecoleta-web) and [`mobile`](https://github.com/DiegoVictor/ecoleta-app) front-ends. Allow to register points and set the items type that point receive. The app has friendly errors, validation, also a simple versioning was made.
