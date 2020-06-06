@@ -9,6 +9,6 @@ export default celebrate({
     longitude: Joi.number().required(),
     city: Joi.string().required(),
     uf: Joi.string().min(2).max(2).required(),
-    items: Joi.array().required(),
+    items: Joi.string().required(),
   }),
 });

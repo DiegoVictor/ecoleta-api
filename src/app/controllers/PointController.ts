@@ -77,10 +77,13 @@ class PointController {
     const [id] = await transaction('points').insert([point]);
 
     await transaction('points_items').insert(
-      items.map((item_id: number) => ({
-        item_id,
-        point_id: id,
-      })),
+      items
+        .split(',')
+        .map((item: string) => Number(item.trim()))
+        .map((item_id: number) => ({
+          item_id,
+          point_id: id,
+        })),
     );
 
     await transaction.commit();
