@@ -79,7 +79,7 @@ $ yarn dev:server
 ```
 Or:
 ```
-npm run dev:server
+$ npm run dev:server
 ```
 
 ## Error Handling
