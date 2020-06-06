@@ -19,7 +19,12 @@ class PointController {
       .distinct()
       .select('points.*');
 
-    return response.json(points);
+    const serialized_points = points.map(point => ({
+      ...point,
+      image_url: `${process.env.APP_URL}:${process.env.APP_PORT}/uploads/points/${point.image}`,
+    }));
+
+    return response.json(serialized_points);
   }
 
   async show(request: Request, response: Response) {
@@ -31,12 +36,17 @@ class PointController {
       throw notFound('Point not found', { code: 144 });
     }
 
+    const serialized_point = {
+      ...point,
+      image_url: `${process.env.APP_URL}:${process.env.APP_PORT}/uploads/points/${point.image}`,
+    };
+
     const items = await knex('items')
       .join('points_items', 'items.id', '=', 'points_items.item_id')
       .where('points_items.point_id', id)
       .select('items.title');
 
-    return response.json({ point, items });
+    return response.json({ point: serialized_point, items });
   }
 
   async store(request: Request, response: Response) {

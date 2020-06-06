@@ -10,7 +10,7 @@ class ItemController {
       id,
       title,
       image,
-      image_url: `http://localhost:${process.env.APP_PORT}/uploads/${image}`,
+      image_url: `${process.env.APP_URL}:${process.env.APP_PORT}/uploads/items/${image}`,
     }));
 
     return response.json(serialized_items);

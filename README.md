@@ -68,6 +68,7 @@ In this file you may configure your app's port and a url to documentation (this 
 
 |key|description|default
 |---|---|---
+|APP_URL|App's url, when testing the [mobile version](https://github.com/DiegoVictor/ecoleta-app) on devices is strongly recommended to set this key to your expo url (e.g. `192.168.0.6`)|`http://localhost`
 |APP_PORT|Port number where the app will run.|`3333`
 |DOCS_URL|An url to docs where users can find more information about the app's internal code errors.|`https://github.com/DiegoVictor/ecoleta-api#errors-reference`
 
