@@ -46,6 +46,7 @@ Remember to run the SQLite database migrations:
 $ npx knex migrate:latest --knexfile knexfile.ts
 ```
 > See more information on [Knex Migrations](http://knexjs.org/#Migrations).
+
 Or simply:
 ```
 $ yarn knex:migrate
