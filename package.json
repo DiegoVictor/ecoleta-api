@@ -9,9 +9,7 @@
     "knex:migrate": "knex migrate:latest --knexfile knexfile.ts",
     "knex:seed": "knex seed:run --knexfile knexfile.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "celebrate": "^12.1.1",
