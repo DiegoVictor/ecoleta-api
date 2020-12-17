@@ -1,5 +1,7 @@
 node_modules
-database.sqlite
+*.sqlite
 .env
 uploads/points/*
 uploads/**/!.gitkeep
+dist
+tests/coverage
