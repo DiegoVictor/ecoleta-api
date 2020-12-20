@@ -9,6 +9,7 @@ import path from 'path';
 import { isBoom } from '@hapi/boom';
 
 import routes from './routes';
+import RouteAliases from './middlewares/RouteAliases';
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
 
+app.use(RouteAliases);
 app.use('/v1', routes);
 
 app.use(errors());
