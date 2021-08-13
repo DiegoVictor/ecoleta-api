@@ -33,6 +33,18 @@
           }
         }
       },
+    },
+    "examples": {
+      "Items": {
+        "value": [
+          {
+            "id": 1,
+            "title": "Lâmpadas",
+            "image": "lampadas.svg",
+            "image_url": "http://localhost:3333/uploads/items/lampadas.svg"
+          }
+        ]
+      },
     }
   }
 }
