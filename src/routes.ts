@@ -17,7 +17,7 @@ const upload = multer(multerConfig);
 
 routes.get('/items', itemsController.index);
 
-routes.get('/points/', cityUfItemsValidator, pointsController.index);
+routes.get('/points', cityUfItemsValidator, pointsController.index);
 routes.get('/points/:id', idValidator, pointsController.show);
 routes.post(
   '/points',
