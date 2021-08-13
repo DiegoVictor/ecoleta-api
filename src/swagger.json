@@ -15,4 +15,24 @@
   ],
   "paths": {
   },
+  "components": {
+    "schemas": {
+      "Item": {
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          }
+        }
+      },
+    }
+  }
 }
