@@ -70,6 +70,30 @@
           }
         ]
       },
+      "Point": {
+        "value": {
+          "point": {
+            "id": 1,
+            "image": "6f91cfcdd57d-baterias.svg",
+            "name": "Recyclus",
+            "email": "contact@recyclus.com",
+            "whatsapp": "551540331438",
+            "latitude": -23.5435933,
+            "longitude": -46.6366882,
+            "city": "São Paulo",
+            "uf": "SP",
+            "image_url": "http://localhost:3333/uploads/points/6f91cfcdd57d-baterias.svg"
+          },
+          "items": [
+            {
+              "title": "Lâmpadas"
+            },
+            {
+              "title": "Pilhas e baterias"
+            }
+          ]
+        }
+      },
     }
   }
 }
