@@ -14,6 +14,31 @@
     }
   ],
   "paths": {
+    "/items": {
+      "get": {
+        "tags": ["items"],
+        "responses": {
+          "200": {
+            "description": "Lists points' items.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Item"
+                  }
+                },
+                "examples": {
+                  "Items": {
+                    "$ref": "#/components/examples/Items"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
   },
   "components": {
     "schemas": {
