@@ -168,7 +168,41 @@
         }
       }
     },
-    },
+    "/points/{id}": {
+      "get": {
+        "tags": ["points"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Return one point",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Point"
+                  }
+                },
+                "examples": {
+                  "Point": {
+                    "$ref": "#/components/examples/Point"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "components": {
     "schemas": {
