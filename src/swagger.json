@@ -39,6 +39,58 @@
         }
       }
     },
+    "/points": {
+      "get": {
+        "tags": ["points"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "city",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "uf",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "items",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1,2,3"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lists points",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Point"
+                  }
+                },
+                "examples": {
+                  "Points": {
+                    "$ref": "#/components/examples/Points"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+    },
   },
   "components": {
     "schemas": {
