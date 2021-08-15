@@ -7,7 +7,7 @@ const config = {
       __dirname,
       'src',
       'database',
-      `${process.env.NODE_ENV}.sqlite`,
+      `${process.env.NODE_ENV || 'development'}.sqlite`,
     ),
   },
   migrations: {
