@@ -1,12 +1,12 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import factory from 'factory-girl';
 
 factory.define(
   'Item',
   {},
   {
-    title: faker.name.title,
-    image: () => `${faker.random.word()}.jpg`,
+    title: faker.commerce.productName,
+    image: () => `${faker.lorem.word()}.jpg`,
   },
 );
 
@@ -21,7 +21,7 @@ factory.define(
     longitude: () => Number(faker.address.longitude()),
     city: faker.address.city,
     uf: faker.address.stateAbbr,
-    image: () => `${faker.random.word()}.jpg`,
+    image: () => `${faker.lorem.word()}.jpg`,
   },
 );
 

@@ -1,5 +1,5 @@
 import request from 'supertest';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import fs from 'fs';
 import path from 'path';
 
@@ -113,7 +113,7 @@ describe('PointsController', () => {
   });
 
   it('should not be able to get one point that not exists', async () => {
-    const point_id = faker.random.number();
+    const point_id = faker.datatype.number();
 
     const response = await request(app)
       .get(`/v1/points/${point_id}`)
