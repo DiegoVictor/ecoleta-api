@@ -46,16 +46,8 @@ class PointsController {
   }
 
   async store(request: Request, response: Response) {
-    const {
-      name,
-      email,
-      whatsapp,
-      latitude,
-      longitude,
-      city,
-      uf,
-      items,
-    } = request.body;
+    const { name, email, whatsapp, latitude, longitude, city, uf, items } =
+      request.body;
 
     const point = await createPointService.execute({
       name,
