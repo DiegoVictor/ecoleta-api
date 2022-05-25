@@ -65,7 +65,7 @@ class PointsController {
       longitude,
       city,
       uf,
-      image: request.file.filename,
+      image: request.file?.filename || '',
       items,
     });
 
