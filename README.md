@@ -6,7 +6,7 @@
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![jest](https://img.shields.io/badge/jest-26.6.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/ecoleta-api?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/ecoleta-api)
-[![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/DiegoVictor/ecoleta-api/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/ecoleta-api/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecoleta&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fecoleta-api%2Fmain%2FInsomnia_2020-06-06.json)
 
