@@ -1,10 +1,10 @@
 # [API] Ecoleta
 ![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/ecoleta-api?style=flat-square&logo=circleci)
-[![typescript](https://img.shields.io/badge/typescript-3.9.7-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![sqlite3](https://img.shields.io/badge/sqlite-5.0.0-003b57?style=flat-square&logo=sqlite&logoColor=white)](https://redis.io/)
-[![eslint](https://img.shields.io/badge/eslint-6.8.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
+[![typescript](https://img.shields.io/badge/typescript-5.2.2-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![sqlite3](https://img.shields.io/badge/sqlite-5.1.6-003b57?style=flat-square&logo=sqlite&logoColor=white)](https://redis.io/)
+[![eslint](https://img.shields.io/badge/eslint-8.48.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
-[![jest](https://img.shields.io/badge/jest-26.6.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
+[![jest](https://img.shields.io/badge/jest-29.6.4-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/ecoleta-api?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/ecoleta-api)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/ecoleta-api/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
