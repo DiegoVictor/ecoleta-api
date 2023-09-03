@@ -40,8 +40,8 @@ describe('PointsController', () => {
     const item = await factory.attrs<Item>('Item');
     const [item_id] = await connection('items').insert(item);
 
-    const city = faker.address.city();
-    const uf = faker.address.stateAbbr();
+    const city = faker.location.city();
+    const uf = faker.location.state({ abbreviated: true });
 
     const points = await factory.attrsMany<Point>(
       'Point',
@@ -113,7 +113,7 @@ describe('PointsController', () => {
   });
 
   it('should not be able to get one point that not exists', async () => {
-    const point_id = faker.datatype.number();
+    const point_id = faker.number.int();
 
     const response = await request(app)
       .get(`/v1/points/${point_id}`)
@@ -132,15 +132,8 @@ describe('PointsController', () => {
     const item = await factory.attrs<Item>('Item');
     const [item_id] = await connection('items').insert(item);
 
-    const {
-      name,
-      city,
-      uf,
-      email,
-      whatsapp,
-      latitude,
-      longitude,
-    } = await factory.attrs<Point>('Point');
+    const { name, city, uf, email, whatsapp, latitude, longitude } =
+      await factory.attrs<Point>('Point');
 
     const response = await request(app)
       .post(`/v1/points`)
