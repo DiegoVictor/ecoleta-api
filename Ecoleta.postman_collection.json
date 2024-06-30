@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "2c20936a-148d-455a-8d0f-a35031bc1662",
+		"name": "Ecoleta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19527899"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const items = pm.response.json();\r",
+									"\r",
+									"if (items.length > 0) {\r",
+									"    const ids = items.slice(0, 2).map(({ id }) => id);\r",
+									"    pm.collectionVariables.set('items', ids);\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/items",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Points",
+			"item": [
+				{
+					"name": "List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const [point] = pm.response.json();\r",
+									"\r",
+									"if (point) {\r",
+									"    const { id } = point;\r",
+									"    pm.collectionVariables.set('point_id', id)\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/points?city=São Paulo&uf=SP&items={{items}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"points"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "São Paulo"
+								},
+								{
+									"key": "uf",
+									"value": "SP"
+								},
+								{
+									"key": "items",
+									"value": "{{items}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/points/{{point_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"points",
+								"{{point_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Recyclus",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "contact@recyclus.com",
+									"type": "text"
+								},
+								{
+									"key": "whatsapp",
+									"value": "551540331438",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "-23.5435933",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "-46.6366882",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "São Paulo",
+									"type": "text"
+								},
+								{
+									"key": "uf",
+									"value": "SP",
+									"type": "text"
+								},
+								{
+									"key": "items",
+									"value": "{{items}}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Git/ecoleta-api/tests/utils/image.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/points",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"points"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3333/v1",
+			"type": "string"
+		},
+		{
+			"key": "items",
+			"value": ""
+		},
+		{
+			"key": "point_id",
+			"value": ""
+		}
+	]
+}
