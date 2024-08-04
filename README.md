@@ -1,6 +1,6 @@
 # [API] Ecoleta
 ![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/ecoleta-api?style=flat-square&logo=circleci)
-[![typescript](https://img.shields.io/badge/typescript-5.5.2-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![typescript](https://img.shields.io/badge/typescript-5.5.4-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![sqlite3](https://img.shields.io/badge/sqlite-5.1.7-003b57?style=flat-square&logo=sqlite&logoColor=white)](https://redis.io/)
 [![eslint](https://img.shields.io/badge/eslint-8.57.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
@@ -9,7 +9,6 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/ecoleta-api/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecoleta&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fecoleta-api%2Fmain%2FInsomnia_2024-06-30.json)
-
 
 Responsible for provide data to the [`web`](https://github.com/DiegoVictor/ecoleta-web) and [`mobile`](https://github.com/DiegoVictor/ecoleta-app) front-ends. Allow to register points and set the items type that point receive. The app has friendly errors, validation, also a simple versioning was made.
 
