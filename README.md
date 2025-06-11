@@ -15,10 +15,10 @@ Responsible for provide data to the [`web`](https://github.com/DiegoVictor/ecole
 ## Table of Contents
 * [Installing](#installing)
   * [Configuring](#configuring)
+    * [.env](#env)
     * [SQLite](#sqlite)
       * [Migrations](#migrations)
       * [Seeds](#seeds)
-    * [.env](#env)
 * [Usage](#usage)
   * [Error Handling](#error-handling)
     * [Errors Reference](#errors-reference)
@@ -44,6 +44,16 @@ The application use just one databases: [SQLite](https://www.sqlite.org/index.ht
 ```
 $ docker-compose up -d
 ```
+
+### .env
+In this file you may configure your app's url and port, also a url to documentation (this will be returned with error responses, see [error section](#error-handling)). Rename the `.env.example` in the root directory to `.env` then just update with your settings.
+
+|key|description|default
+|---|---|---
+|APP_URL|App's url, when testing the [mobile version](https://github.com/DiegoVictor/ecoleta-app) on devices is strongly recommended to set this key to your [Expo](https://docs.expo.io/) url (e.g. `192.168.0.6`)|`http://localhost`
+|APP_PORT|Port number where the app will run.|`3333`
+|NODE_ENV|App environment.|`development`
+|DOCS_URL|An url to docs where users can find more information about the app's internal code errors.|`https://github.com/DiegoVictor/ecoleta-api#errors-reference`
 
 ### SQLite
 Store the points and point's items. For more information to how to setup your database see:
@@ -73,16 +83,6 @@ Or simply:
 ```
 $ yarn knex:seed
 ```
-
-### .env
-In this file you may configure your app's url and port, also a url to documentation (this will be returned with error responses, see [error section](#error-handling)). Rename the `.env.example` in the root directory to `.env` then just update with your settings.
-
-|key|description|default
-|---|---|---
-|APP_URL|App's url, when testing the [mobile version](https://github.com/DiegoVictor/ecoleta-app) on devices is strongly recommended to set this key to your [Expo](https://docs.expo.io/) url (e.g. `192.168.0.6`)|`http://localhost`
-|APP_PORT|Port number where the app will run.|`3333`
-|NODE_ENV|App environment.|`development`
-|DOCS_URL|An url to docs where users can find more information about the app's internal code errors.|`https://github.com/DiegoVictor/ecoleta-api#errors-reference`
 
 # Usage
 To start up the app run:
